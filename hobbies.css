@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #222222;
+    --second-bg-color: #333333;
+    --text-color: #f5f5f5;
+    --main-color: #ff8800;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    height: 60px;
+    padding: 0 20px;
+}
+.navbar-title strong{
+    margin-left: 50px;
+}
+.navbar-title span {
+    color: #ff8800; 
+    
+}
+.navbar-title {
+    font-size: 24px;
+    margin-right: auto;
+}
+
+.navbar-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff8800;
+    color:  #333333;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: .2rem solid var(--main-color);
+    transition: all .5s;
+}
+.navbar-button:hover{
+    color: #ff8800;
+    background-color: var(--second-bg-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.portfolio-box {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem; 
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.carousel-wrapper {
+    height: 500px;
+    position: relative;
+    width: 1000px;
+    display: block;
+    margin: 50px auto ;
+    border-radius: 8px;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;   
+
+}
+
+.image-description {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: var(--main-color);
+    padding: 8px;
+    border-radius: 50px;
+  }
+  
+  .image-description h2 {
+    font-size: 20px;
+    color: var(--bg-color);
+   
+  }
+
+
+.image-description p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.image-description a {
+    color: #ff8800;
+    text-decoration: underline;
+}
+
+.image-description a:hover {
+    color: #ff5500;
+}
+
+.arrow {
+    border: solid var(--main-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev {
+    left: -35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+    right: -35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('images/snapseed-01.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center;    
+}
+
+.item-2 {
+    background: url('images/scenic.jpeg');
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center; 
+}
+
+.item-3 {
+    background: url('images/clay.jpeg');
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center; 
+}
+
+.item-4 {
+    background: url('images/kabaddi.jpg');
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center; 
+    
+}
+
+.item-5 {
+    background: url('images/sketch.jpg');
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center; 
+}
+
+.item-6 {
+    background: url('images/paint.jpg');
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center; 
+}
+
+.item-7 {
+    background: url('images/adventure.jpg');
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center; 
+}
+
+
+
+/* Default styles */
+
+/* Add your existing CSS code here */
+
+/* Media queries */
+
+@media (max-width: 300px) {
+    /* Styles for screens up to 300px wide */
+    
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+    
+    .carousel-wrapper {
+        width: 80%;
+        height: 100px;
+    }
+    
+    .portfolio-box {
+        max-width: 90%;
+        padding: 1rem;
+    }
+    
+    .carousel-item {
+        padding: 8px;
+    }
+    
+    .arrow-prev,
+    .arrow-next {
+        padding: 4px;
+    }
+    
+    .carousel-item {
+        /* Example style for images within 300px width */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .image-description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for screens up to 480px wide (e.g., small mobile devices) */
+    
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .carousel-wrapper {
+        width: 80%;
+        height: 150px;
+    }
+    
+    .portfolio-box {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .carousel-item {
+        padding: 10px;
+    }
+    
+    .arrow-prev,
+    .arrow-next {
+        padding: 6px;
+    }
+    
+    .carousel-item {
+        /* Example style for images within 480px width */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .image-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Styles for screens up to 768px wide (e.g., smartphones) */
+    
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .carousel-wrapper {
+        width: 80%;
+        height: 200px;
+    }
+    
+    .portfolio-box {
+        max-width: 90%;
+        padding: 2rem;
+    }
+    
+    .carousel-item {
+        padding: 15px;
+    }
+    
+    .arrow-prev,
+    .arrow-next {
+        padding: 8px;
+    }
+    
+    .carousel-item {
+        /* Example style for images within 768px width */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .image-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Styles for screens up to 992px wide (e.g., small tablets) */
+    
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .carousel-wrapper {
+        width: 80%;
+        height: 300px;
+    }
+    
+    .portfolio-box {
+        max-width: 90%;
+        padding: 2.5rem;
+    }
+    
+    .carousel-item {
+        padding: 15px;
+    }
+    
+    .arrow-prev,
+    .arrow-next {
+        padding: 10px;
+    }
+    
+    .carousel-item {
+        /* Example style for images within 992px width */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .image-description {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    /* Styles for screens up to 1200px wide (e.g., tablets) */
+    
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+    }
+    
+    .carousel-wrapper {
+        width: 80%;
+        height: 400px;
+    }
+    
+    .portfolio-box {
+        max-width: 90%;
+        padding: 3rem;
+    }
+    
+    .carousel-item {
+        padding: 20px;
+    }
+    
+    .arrow-prev,
+    .arrow-next {
+        padding: 12px;
+    }
+    
+    .carousel-item {
+        /* Example style for images within 1200px width */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .image-description {
+        font-size: 20px;
+    }
+}
